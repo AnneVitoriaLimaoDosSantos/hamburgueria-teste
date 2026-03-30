@@ -7,10 +7,10 @@
 
 /* BODY */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 
   background: 
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url('fundo.png') no-repeat center;
 
   background-size: cover;
@@ -25,9 +25,7 @@ body {
 header {
   position: relative;
   padding: 40px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 /* LOGO */
@@ -38,21 +36,39 @@ header {
 }
 
 .logo img {
-  width: 90px;
-  height: auto;
+  width: 100px;
 }
 
 /* TÍTULO */
-.titulo {
-  text-align: center;
-}
-
 .titulo img {
-  width: 220px;
-  max-width: 90%;
+  width: 250px;
 }
 
-/* MENU GRID */
+.subtitulo {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* BOTÃO */
+.btn {
+  margin-top: 15px;
+  display: inline-block;
+  background: #ff3c00;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff5a1f;
+  transform: scale(1.05);
+}
+
+/* MENU */
 .menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -74,9 +90,9 @@ header {
   justify-content: space-between;
 }
 
-/* HOVER */
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
 }
 
 /* IMAGEM */
@@ -88,7 +104,7 @@ header {
 
 /* TEXTO */
 .card h2 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 10px 0;
 }
 
@@ -100,11 +116,12 @@ header {
 /* PREÇO */
 .price {
   background: #ff3c00;
-  padding: 8px 15px;
+  padding: 10px 18px;
   border-radius: 20px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 15px;
   display: inline-block;
+  font-size: 16px;
 }
 
 /* RODAPÉ */
@@ -121,60 +138,19 @@ footer p {
   font-size: 14px;
 }
 
-/* 📱 CELULAR */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-
-  header {
-    flex-direction: column;
-    padding: 20px;
-  }
 
   .logo {
     position: static;
     margin-bottom: 10px;
   }
 
-  .logo img {
-    width: 80px;
-  }
-
   .titulo img {
-    width: 180px;
+    width: 200px;
   }
 
   .menu {
     grid-template-columns: 1fr;
-  }
-}
-
-/* 📲 TABLET */
-@media (min-width: 769px) and (max-width: 1023px) {
-
-  .logo img {
-    width: 110px;
-  }
-
-  .titulo img {
-    width: 300px;
-  }
-
-  .menu {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 💻 PC */
-@media (min-width: 1024px) {
-
-  .logo img {
-    width: 140px;
-  }
-
-  .titulo img {
-    width: 420px;
-  }
-
-  .menu {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
